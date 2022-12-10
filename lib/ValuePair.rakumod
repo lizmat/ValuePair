@@ -3,6 +3,7 @@ use nqp;
 
 class ValuePair is Pair {
     proto method new(|) {*}
+    multi method new(Pair:D $pair) { self.Pair::new($pair.key, $pair.value) }
     multi method new( $key,   $value ) { self.Pair::new($key, $value) }
     multi method new(:$key!, :$value!) { self.Pair::new($key, $value) }
 
@@ -52,9 +53,10 @@ ValuePair - Provide an immutable Pair value type
 use ValuePair;
 
 my $a = ValuePair.new("a",42);
-my $b = ValuePair.new("a",42);
+my $b = ValuePair.new( key => "a", value => 42);
+my $c = ValuePair.new( (a => 42) );
 
-set($a, $b);  # elems == 1
+set($a, $b, $c);  # elems == 1
 
 =end code
 
@@ -69,6 +71,9 @@ object can be a container, and thus mutable.  Therefore, a standard Pair
 is B<not> a value type.  The C<ValuePair> class provided by this module,
 is a subclass of C<Pair>, and does not allow a mutable value.  And thus
 it can be a value type.
+
+The C<.new> method either accepts two positional arguments (key and value),
+or C<key> and C<value> named arguments, or an existing C<Pair>.
 
 =head1 AUTHOR
 

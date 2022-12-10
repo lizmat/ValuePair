@@ -2,5 +2,9 @@ Revision history for ValuePair
 
 {{$NEXT}}
 
+0.0.2  2022-12-10T19:30:54+01:00
+    - Add tags in META
+    - Allow for a Pair as the only parameter to .new
+
 0.0.1  2022-12-10T19:12:49+01:00
     - Initial version

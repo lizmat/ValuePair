@@ -12,9 +12,10 @@ SYNOPSIS
 use ValuePair;
 
 my $a = ValuePair.new("a",42);
-my $b = ValuePair.new("a",42);
+my $b = ValuePair.new( key => "a", value => 42);
+my $c = ValuePair.new( (a => 42) );
 
-set($a, $b);  # elems == 1
+set($a, $b, $c);  # elems == 1
 ```
 
 DESCRIPTION
@@ -23,6 +24,8 @@ DESCRIPTION
 The functionality provided by this module, will most likely be provided in language level 6.e and higher. If an implementation of ValuePair is already available, loading this module becomes a no-op.
 
 Raku provides a semi-immutable `Pair` datatype, where the value of a Pair object can be a container, and thus mutable. Therefore, a standard Pair is **not** a value type. The `ValuePair` class provided by this module, is a subclass of `Pair`, and does not allow a mutable value. And thus it can be a value type.
+
+The `.new` method either accepts two positional arguments (key and value), or `key` and `value` named arguments, or an existing `Pair`.
 
 AUTHOR
 ======

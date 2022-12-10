@@ -18,8 +18,11 @@
   ],
   "source-url": "https://github.com/lizmat/ValuePair.git",
   "tags": [
+    "UTILS",
+    "IMMUTABLE",
+    "VALUETYPE"
   ],
   "test-depends": [
   ],
-  "version": "0.0.1"
+  "version": "0.0.2"
 }

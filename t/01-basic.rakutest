@@ -1,12 +1,14 @@
 use Test;
 use ValuePair;
 
-plan 3;
+plan 4;
 
 my $a = ValuePair.new("a", 42);
 my $b = ValuePair.new(:key<a>, :42value);
+my $c = ValuePair.new( (a => 42) );
 
-ok $a === $b, 'check whether they are the same value type';
+ok $a === $b, 'check whether they are the same value type (1)';
+ok $a === $c, 'check whether they are the same value type (2)';
 is-deeply $a.key,  "a", 'is the key ok';
 is-deeply $a.value, 42, 'is the value ok';
 
