@@ -1,0 +1,13 @@
+use Test;
+use ValuePair;
+
+plan 3;
+
+my $a = ValuePair.new("a", 42);
+my $b = ValuePair.new(:key<a>, :42value);
+
+ok $a === $b, 'check whether they are the same value type';
+is-deeply $a.key,  "a", 'is the key ok';
+is-deeply $a.value, 42, 'is the value ok';
+
+# vim: expandtab shiftwidth=4
