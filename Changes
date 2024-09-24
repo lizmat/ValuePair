@@ -1,6 +1,8 @@
 Revision history for ValuePair
 
 {{$NEXT}}
+
+0.0.3  2024-09-24T17:34:28+02:00
     - Remove mention of future inclusion into Raku
     - Add sponsor button
     - Add seperate CI badges for each OS
