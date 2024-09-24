@@ -1,6 +1,10 @@
 Revision history for ValuePair
 
 {{$NEXT}}
+    - Remove mention of future inclusion into Raku
+    - Add sponsor button
+    - Add seperate CI badges for each OS
+    - Update copyright year
 
 0.0.2  2022-12-10T19:30:54+01:00
     - Add tags in META

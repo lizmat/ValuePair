@@ -62,10 +62,6 @@ set($a, $b, $c);  # elems == 1
 
 =head1 DESCRIPTION
 
-The functionality provided by this module, will most likely be provided
-in language level 6.e and higher.  If an implementation of ValuePair
-is already available, loading this module becomes a no-op.
-
 Raku provides a semi-immutable C<Pair> datatype, where the value of a Pair
 object can be a container, and thus mutable.  Therefore, a standard Pair
 is B<not> a value type.  The C<ValuePair> class provided by this module,
@@ -88,7 +84,7 @@ deal to me!
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright 2022 Elizabeth Mattijsen
+Copyright 2022, 2024 Elizabeth Mattijsen
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 
