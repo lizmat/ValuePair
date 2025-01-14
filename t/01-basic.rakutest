@@ -1,7 +1,7 @@
 use Test;
 use ValuePair;
 
-plan 4;
+plan 5;
 
 my $a = ValuePair.new("a", 42);
 my $b = ValuePair.new(:key<a>, :42value);
@@ -11,5 +11,7 @@ ok $a === $b, 'check whether they are the same value type (1)';
 ok $a === $c, 'check whether they are the same value type (2)';
 is-deeply $a.key,  "a", 'is the key ok';
 is-deeply $a.value, 42, 'is the value ok';
+
+is $a.raku, Q|ValuePair.new("a",42)|, 'is the .raku representation ok';
 
 # vim: expandtab shiftwidth=4

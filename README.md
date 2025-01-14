@@ -21,7 +21,9 @@ set($a, $b, $c);  # elems == 1
 DESCRIPTION
 ===========
 
-Raku provides a semi-immutable `Pair` datatype, where the value of a Pair object can be a container, and thus mutable. Therefore, a standard Pair is **not** a value type. The `ValuePair` class provided by this module, is a subclass of `Pair`, and does not allow a mutable value. And thus it can be a value type.
+Raku provides a semi-immutable `Pair` datatype, where the value of a `Pair` object can be a container, and thus mutable. Therefore, a standard `Pair` object is **not** a value type.
+
+The `ValuePair` class provided by this module, is a subclass of `Pair`, and does not allow a mutable value. And thus it can be a value type.
 
 The `.new` method either accepts two positional arguments (key and value), or `key` and `value` named arguments, or an existing `Pair`.
 
@@ -37,7 +39,7 @@ If you like this module, or what I’m doing more generally, committing to a [sm
 COPYRIGHT AND LICENSE
 =====================
 
-Copyright 2022, 2024 Elizabeth Mattijsen
+Copyright 2022, 2024, 2025 Elizabeth Mattijsen
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 
